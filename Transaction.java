@@ -14,4 +14,29 @@ public class Transaction {
         this.amount = amount;
         this.transactionType = transactionType;
     }
+
+    public UUID getNum() {
+        return this.num;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+    public void setDescription( String description) {
+        this.description = description;
+    }
+
+    public BigDecimal getAmount() {
+        return this.amount;
+    }
+    public void setAmount( BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public TransactionType getTransactionType() {
+        return this.transactionType;
+    }
+    public void setTransactionType( TransactionType transactionType) {
+        this.transactionType = transactionType;
+    }
 }
