@@ -5,13 +5,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Transaction> transactions = new ArrayList<>();
+        TransactionManager transactionManager = new TransactionManager();
 
-        transactions.add(new Transaction("Take out the trash", new BigDecimal("10.00"), TransactionType.OUT));
-        transactions.add(new Transaction("Get groceries", new BigDecimal("50.00"), TransactionType.OUT));
+        transactionManager.addTransaction(new Transaction("Take out the trash", new BigDecimal("10.00"), TransactionType.OUT));
+        transactionManager.addTransaction(new Transaction("Get groceries", new BigDecimal("50.00"), TransactionType.OUT));
 
         System.out.println("Transactions:");
-        for (Transaction transaction : transactions) {
+        for (Transaction transaction : transactionManager.getTransactions()) {
             System.out.println("- " + transaction.getDescription() + ": " + transaction.getAmount());
         }
     }
