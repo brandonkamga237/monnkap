@@ -2,10 +2,10 @@ import java.util.ArrayList;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-public class TransactionManager {
+public class TransactionService {
     private ArrayList<Transaction> transactions;
 
-    public TransactionManager() {
+    public TransactionService() {
         this.transactions = new ArrayList<>();
     }
 

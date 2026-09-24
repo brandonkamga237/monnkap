@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        TransactionManager transactionManager = new TransactionManager();
+        TransactionService transactionManager = new TransactionService();
         Scanner scanner = new Scanner(System.in);
 
         boolean running = true;
