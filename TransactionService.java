@@ -4,13 +4,16 @@ import java.util.stream.Collectors;
 
 public class TransactionService {
     private ArrayList<Transaction> transactions;
+    private final FileTransactionRepository fileTransactionRepository;
 
     public TransactionService() {
         this.transactions = new ArrayList<>();
+        fileTransactionRepository = new FileTransactionRepository();
     }
 
     public void addTransaction(Transaction transaction) {
         this.transactions.add(transaction);
+        fileTransactionRepository.save(transaction);
     }
 
     public Transaction getTransactionByNum(UUID num) {

@@ -20,8 +20,11 @@ public class FileTransactionRepository implements TransactionRepository{
 
     @Override
     public void save(Transaction transaction) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'save'");
+        try {
+            Files.writeString(file, transaction.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

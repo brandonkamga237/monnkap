@@ -39,4 +39,8 @@ public class Transaction {
     public void setTransactionType( TransactionType transactionType) {
         this.transactionType = transactionType;
     }
+
+    public String toString () {
+        return num + " - " + amount + " - " + description + " - " + transactionType;
+    }
 }
