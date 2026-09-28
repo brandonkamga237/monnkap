@@ -1,1 +1,8 @@
+# Maven
+target/
+
+# Java
+*.class
+
+# Local database
 db.txt

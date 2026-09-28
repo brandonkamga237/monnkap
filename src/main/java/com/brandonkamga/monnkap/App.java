@@ -1,4 +1,4 @@
-package com.example.monnkap;
+package com.brandonkamga.monnkap;
 
 
 public class App 
