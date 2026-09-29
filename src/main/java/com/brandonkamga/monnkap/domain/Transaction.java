@@ -1,4 +1,4 @@
-package com.brandonkamga.monnkap;
+package com.brandonkamga.monnkap.domain;
 
 import java.math.BigDecimal;
 import java.util.UUID;
