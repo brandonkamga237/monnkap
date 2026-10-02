@@ -7,4 +7,6 @@ import com.brandonkamga.monnkap.domain.Transaction;
 public interface TransactionService {
     
     void addTransaction(Transaction t) throws IOException;
+
+    void getAllTransactions(Transaction t) throws IOException;
 }

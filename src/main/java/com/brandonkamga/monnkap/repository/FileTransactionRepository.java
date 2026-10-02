@@ -3,6 +3,7 @@ package com.brandonkamga.monnkap.repository;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 
 import com.brandonkamga.monnkap.domain.Transaction;
 
@@ -20,6 +21,12 @@ public class FileTransactionRepository implements TransactionRepository {
 
     @Override
     public void save(Transaction t) throws IOException {
-        Files.writeString(path, t.toString());
+        Files.writeString(
+            path,
+            t.toString() + System.lineSeparator(),
+            StandardOpenOption.APPEND
+            );
     }
+
+    
 }
