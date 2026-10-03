@@ -17,6 +17,13 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
+    public Transaction(UUID num, String description, BigDecimal amount, TransactionType transactionType) {
+        this.num = num;
+        this.description = description;
+        this.amount = amount;
+        this.transactionType = transactionType;
+    }
+
     public UUID getNum() {
         return this.num;
     }
@@ -42,7 +49,8 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    public String toString () {
-        return num + " - " + amount + " - " + description + " - " + transactionType;
+    @Override
+    public String toString() {
+        return num + ";" + amount + ";" + description + ";" + transactionType;
     }
 }
